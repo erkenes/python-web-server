@@ -1,0 +1,4 @@
+.idea/
+.venv/
+Docker/container-files/__pycache__/
+Docker/container-files/*/**/__pycache__

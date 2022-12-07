@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  # Web-Server
+  web:
+    restart: always
+    build: ./Docker
+    ports:
+      - '8080:8080'
+    working_dir: /data
+
+networks:
+  default:
+    driver: bridge
+    name: '${PROJECT_IDENTIFIER}'
