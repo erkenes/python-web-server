@@ -5,9 +5,9 @@ class JsonTemplateHandler(RequestHandler):
         super().__init__()
         self.contentType = 'application/json'
 
-    def find(self, routeData):
+    def find(self, route_data, query_params):
         try:
-            template_file = open('templates/{}'.format(routeData['template']))
+            template_file = open('templates/{}'.format(route_data['template']))
             self.contents = template_file
             self.setStatus(200)
             return True

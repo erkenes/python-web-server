@@ -14,7 +14,7 @@ class StaticHandler(RequestHandler):
             'undefined': 'text/plain'
         }
 
-    def find(self, file_path):
+    def find(self, file_path, query_params):
         split_path = os.path.splitext(file_path)
         extension = (split_path[1]).lstrip('.')
 
